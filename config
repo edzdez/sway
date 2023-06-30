@@ -13,10 +13,11 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 ### Style
 default_border pixel 1
+font pango:JetbrainsMonoNerdFont Regular 10
 
 # class                 border  bground text    indicator child_border
-client.focused          #1d1f21 #1d1f21 #c5c8c6 #81a2be   #1d1f21
-client.focused_inactive #1d1f21 #1d1f21 #515151 #373b41   #1d1f21
+client.focused          #1d1f21 #373b41 #c5c8c6 #81a2be   #1d1f21
+client.focused_inactive #1d1f21 #373b41 #c5c8c6 #373b41   #1d1f21
 client.unfocused        #1d1f21 #1d1f21 #515151 #373b41   #1d1f21
 client.urgent           #f0c674 #f0c674 #1d1f21 #f0c674   #f0c674
 client.placeholder      #1d1f21 #1d1f21 #c5c8c6 #000000   #0C0C0C

@@ -1,0 +1,42 @@
+font=Jetbrains Mono Nerd Font
+
+clock
+timestr=%l:%M %p
+datestr=%A, %b %e
+
+screenshots
+
+fade-in=0.2
+
+effect-blur=20x2
+effect-greyscale
+effect-scale=0.3
+
+indicator
+indicator-radius=100
+
+text-color=c5c8c6
+key-hl-color=81a2be
+
+separator-color=1d1f21
+
+inside-color=1d1f21
+inside-clear-color=f0c674
+inside-ver-color=81a2be
+inside-wrong-color=cc6666
+
+ring-color=373b41
+ring-clear-color=f0c674
+ring-ver-color=81a2be
+ring-wrong-color=cc6666
+
+line-color=1d1f21
+line-clear-color=1d1f21
+line-ver-color=1d1f21
+line-wrong-color=1d1f21
+
+text-clear-color=1d1f21
+text-ver-color=1d1f21
+text-wrong-color=1d1f21
+
+bs-hl-color=de935f

@@ -14,6 +14,7 @@ exec wl-paste -t text --watch clipman store --no-persist
 ### Style
 default_border pixel 1
 font pango:JetbrainsMonoNerdFont Regular 10
+title_align center
 
 # class                 border  bground text    indicator child_border
 client.focused          #1d1f21 #373b41 #c5c8c6 #81a2be   #1d1f21
@@ -52,6 +53,8 @@ set $menu j4-dmenu-desktop -term=alacritty --no-generic --dmenu='dmenu -b -l 20 
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 
 output * bg ~/.local/share/backgrounds/tomorrow_night_triangle.png fill
+# bindswitch lid:on output eDP-1 disable
+# bindswitch lid:off output eDP-1 enable
 
 ### Idle configuration
 #
@@ -111,6 +114,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- && $HOME/.local/bin/notify-backlight.sh
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5% && $HOME/.local/bin/notify-backlight.sh
 
+    # Toggle internal display
+    bindsym --locked $mod+Mod1+d exec swaymsg output eDP-1 toggle
 
     # Start a terminal
     bindsym $mod+Return exec $term

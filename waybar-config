@@ -50,10 +50,11 @@
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""],
-        "tooltip": false
+        "tooltip": false,
+        "on-scroll-up": "brightnessctl set +1% && $HOME/.local/bin/notify-backlight.sh",
+        "on-scroll-down": "brightnessctl set 1%- && $HOME/.local/bin/notify-backlight.sh"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%{format_source}",
         "format-muted": " {volume}%{format_source}",
         "format-bluetooth": "{icon} {volume}%{format_source}",
@@ -63,7 +64,10 @@
         "format-icons": {
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "pavucontrol",
+        "on-click-middle": "$HOME/.local/bin/pamixer -t && $HOME/.local/bin/notify-volume.sh",
+        "on-scroll-up": "$HOME/.local/bin/pamixer -i 1 && $HOME/.local/bin/notify-volume.sh",
+        "on-scroll-down": "$HOME/.local/bin/pamixer -d 1 && $HOME/.local/bin/notify-volume.sh",
     },
     "battery": {
         "states": {

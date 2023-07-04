@@ -5,7 +5,7 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["sway/mode", "sway/workspaces", "sway/scratchpad", "sway/window"],
-    "modules-right": ["custom/sep", "cpu", "custom/sep", "memory", "custom/sep", "backlight", "custom/sep", "pulseaudio", "custom/sep", "battery", "custom/sep", "clock", "custom/sep", "clock#date", "custom/sep", "idle_inhibitor", "tray"],
+    "modules-right": ["custom/sep", "cpu", "custom/sep", "memory", "custom/sep", "backlight", "custom/sep", "pulseaudio", "custom/sep", "battery", "custom/sep", "clock", "custom/sep", "clock#date", "idle_inhibitor", "tray"],
     // Modules configuration
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"

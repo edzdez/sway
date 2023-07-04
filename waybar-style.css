@@ -61,7 +61,8 @@ window#waybar.empty {
 
 #idle_inhibitor {
     font-weight: normal;
-    background: #373b41;
+    /* background: #373b41; */
+    background: #1d1f21;
     color: #c5c8c6;
     padding: 0 10px 0 8px;
 }
@@ -140,7 +141,7 @@ window#waybar.empty {
 
 #tray {
     font-weight: normal;
-    background: #373b41;
-    /* background: #1d1f21; */
+    /* background: #373b41; */
+    background: #1d1f21;
     padding: 0 8px;
 }

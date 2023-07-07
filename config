@@ -176,7 +176,7 @@ for_window [app_id="zoom"] sticky enable
     # Toggle bar
     bindsym $mod+Shift+b bar mode toggle
 
-    bindsym Scroll_Lock exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    bindsym Scroll_Lock exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
 #
 # Moving around:
 #

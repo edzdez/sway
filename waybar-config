@@ -4,7 +4,7 @@
     // "width": 1280, // Waybar width
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/mode", "sway/workspaces", "sway/scratchpad", "sway/window"],
+    "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode", "sway/window"],
     "modules-right": ["custom/sep", "cpu", "custom/sep", "memory", "custom/sep", "backlight", "custom/sep", "pulseaudio", "custom/sep", "battery", "custom/sep", "clock", "custom/sep", "clock#date", "idle_inhibitor", "tray"],
     // Modules configuration
     "sway/mode": {

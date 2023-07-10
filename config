@@ -5,11 +5,17 @@
 # Read `man 5 sway` for a complete reference.
 
 ### Autostart
+exec /usr/libexec/polkit-gnome-authentication-agent-1
 exec dunst
+
 exec nm-applet --indicator
 exec /home/ethan/.local/bin/power-profiles-applet
-exec wmname LG3D
+exec blueman-applet
+exec flameshot
+
 exec wl-paste -t text --watch clipman store --no-persist
+
+exec wmname LG3D
 
 ### Style
 default_border pixel 1
@@ -26,6 +32,7 @@ client.placeholder      #1d1f21 #1d1f21 #c5c8c6 #000000   #0C0C0C
 client.background       #1d1f21
 
 for_window [shell="xwayland"] title_format "%title [XWayland]"
+# gaps inner 1
 
 ### Variables
 #
@@ -58,8 +65,8 @@ output * bg ~/.local/share/backgrounds/tomorrow_night_triangle.png fill
 output eDP-1 position 0 1080
 output "ASUSTek COMPUTER INC ASUS VG249 0x0000C333" position 0 0 resolution 1920x1080@120Hz
 
-bindswitch lid:on output eDP-1 disable
-bindswitch lid:off output eDP-1 enable
+bindswitch --locked lid:on output eDP-1 disable
+bindswitch --locked lid:off output eDP-1 enable
 
 ### Idle configuration
 #
@@ -177,6 +184,7 @@ for_window [app_id="zoom"] sticky enable
     bindsym $mod+Shift+b bar mode toggle
 
     bindsym Scroll_Lock exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
+    bindsym $mod+Shift+Escape exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
 #
 # Moving around:
 #
@@ -190,6 +198,9 @@ for_window [app_id="zoom"] sticky enable
     bindsym $mod+Down focus down
     bindsym $mod+Up focus up
     bindsym $mod+Right focus right
+
+    # Trigger sway-easyfocus
+    bindsym $mod+Escape exec ~/.local/bin/sway-easyfocus
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left

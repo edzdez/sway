@@ -123,9 +123,9 @@ for_window [app_id="zoom"] sticky enable
 # Basics:
 #
     # Volume/Brightness Control
-    bindsym --locked XF86AudioMute exec pamixer -t && ~/.local/bin/notify-volume.sh
-    bindsym --locked XF86AudioLowerVolume exec pamixer -d 5 && ~/.local/bin/notify-volume.sh
-    bindsym --locked XF86AudioRaiseVolume exec pamixer -i 5 && ~/.local/bin/notify-volume.sh
+    bindsym --locked XF86AudioMute exec $HOME/.local/bin/pamixer -t && ~/.local/bin/notify-volume.sh
+    bindsym --locked XF86AudioLowerVolume exec $HOME/.local/bin/pamixer -d 5 && ~/.local/bin/notify-volume.sh
+    bindsym --locked XF86AudioRaiseVolume exec $HOME/.local/bin/pamixer -i 5 && ~/.local/bin/notify-volume.sh
     bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%- && $HOME/.local/bin/notify-backlight.sh
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5% && $HOME/.local/bin/notify-backlight.sh

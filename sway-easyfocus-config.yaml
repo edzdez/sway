@@ -1,0 +1,10 @@
+window_background_color: 1d1f21
+window_background_opacity: 0.25
+
+label_background_color: 81a2be
+label_background_opacity: 1.0
+
+label_text_color: 1d1f21
+
+font_family: Jetbrains Mono Nerd Font
+font_weight: bold

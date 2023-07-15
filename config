@@ -22,14 +22,23 @@ default_border pixel 1
 font pango:JetbrainsMonoNerdFont Regular 10
 title_align center
 
-# class                 border  bground text    indicator child_border
-client.focused          #373b41 #373b41 #c5c8c6 #81a2be   #1d1f21
-client.focused_inactive #373b41 #373b41 #c5c8c6 #373b41   #1d1f21
-client.unfocused        #373b41 #1d1f21 #555555 #373b41   #1d1f21
-client.urgent           #f0c674 #f0c674 #1d1f21 #f0c674   #f0c674
-client.placeholder      #1d1f21 #1d1f21 #c5c8c6 #000000   #0C0C0C
+### Tomorrow Night
+# # class                 border  bground text    indicator child_border
+# client.focused          #373b41 #373b41 #c5c8c6 #81a2be   #1d1f21
+# client.focused_inactive #373b41 #373b41 #c5c8c6 #373b41   #1d1f21
+# client.unfocused        #373b41 #1d1f21 #555555 #373b41   #1d1f21
+# client.urgent           #f0c674 #f0c674 #1d1f21 #f0c674   #f0c674
+# client.placeholder      #1d1f21 #1d1f21 #c5c8c6 #000000   #0C0C0C
+# client.background       #1d1f21
 
-client.background       #1d1f21
+### Gruvbox
+# class                 border  bground text    indicator child_border
+client.focused          #504945 #504945 #ebdbb2 #83a598   #1d2021
+client.focused_inactive #3c3836 #3c3836 #ebdbb2 #928374   #1d2021
+client.unfocused        #1d2021 #282828 #928374 #928374   #1d2021
+client.urgent           #fadb2f #fadb2f #1d2021 #fadb2f   #fadb2f
+client.placeholder      #1d2021 #1d2021 #ebdbb2 #1d2021   #1d2021
+client.background       #1d2021
 
 for_window [shell="xwayland"] title_format "%title [XWayland]"
 # gaps inner 1

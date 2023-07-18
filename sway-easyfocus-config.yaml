@@ -1,10 +1,13 @@
-window_background_color: 1d2021
-window_background_opacity: 0.25
+window_background_color: '282828'
+window_background_opacity: 0.4
 
-label_background_color: 83a598
+label_background_color: '504945'
 label_background_opacity: 1.0
 
-label_text_color: 1d2021
+label_text_color: ebdbb2
 
 font_family: Jetbrains Mono Nerd Font
 font_weight: bold
+
+label_margin_x: 0
+label_margin_y: 0

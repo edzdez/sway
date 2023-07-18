@@ -7,7 +7,7 @@
 }
 
 #custom-sep {
-    background: #1d2021;
+    background: #282828;
 }
 
 tooltip {
@@ -21,13 +21,13 @@ tooltip label {
 #mode {
     padding: 0 0.5rem;
     background: #fabd2f;
-    color: #1d2021;
+    color: #282828;
 }
 
 #workspaces button {
     padding: 0 8px;
     color: #ebdbb2;
-    background: #1d2021;
+    background: #282828;
     border-bottom: 3px solid transparent;
 }
 
@@ -36,14 +36,14 @@ tooltip label {
 }
 
 #workspaces button.focused {
-    background: #504945;
+    background: #3c3836;
     color: #ebdbb2;
     border-bottom: 3px solid #83a598;
 }
 
 #scratchpad {
     font-weight: normal;
-    background: #504945;
+    background: #3c3836;
     color: #ebdbb2;
     padding: 0 0.5rem;
     /* margin: 0 8px 0 0; */
@@ -55,17 +55,17 @@ tooltip label {
 
 window#waybar {
     background: #83a598;
-    color: #1d2021;
+    color: #282828;
     /* font-weight: bold; */
 }
 
 window#waybar.empty {
-    background: #1d2021;
+    background: #282828;
 }
 
 #cpu {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #fb4934;
@@ -73,7 +73,7 @@ window#waybar.empty {
 
 #memory {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #fe8019;
@@ -81,7 +81,7 @@ window#waybar.empty {
 
 #backlight {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #fabd2f;
@@ -89,7 +89,7 @@ window#waybar.empty {
 
 #pulseaudio {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 6px 0 4px;
     border-bottom: 3px solid #b8bb26;
@@ -97,7 +97,7 @@ window#waybar.empty {
 
 #battery {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #83a598;
@@ -105,7 +105,7 @@ window#waybar.empty {
 
 #battery.warning {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #fabd2f;
     padding: 0 4px;
     border-bottom: 3px solid #fabd2f;
@@ -113,7 +113,7 @@ window#waybar.empty {
 
 #battery.critical {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #fb4934;
     padding: 0 4px;
     border-bottom: 3px solid #fb4934;
@@ -121,7 +121,7 @@ window#waybar.empty {
 
 #clock {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #458588;
@@ -129,7 +129,7 @@ window#waybar.empty {
 
 #clock.date {
     font-weight: normal;
-    background: #1d2021;
+    background: #282828;
     color: #ebdbb2;
     padding: 0 4px;
     border-bottom: 3px solid #d3869b;
@@ -137,15 +137,15 @@ window#waybar.empty {
 
 #idle_inhibitor {
     font-weight: normal;
-    /* background: #504945; */
-    background: #1d2021;
+    /* background: #3c3836; */
+    background: #282828;
     color: white;
     padding: 0 10px 0 8px;
 }
 
 #tray {
     font-weight: normal;
-    /* background: #504945; */
-    background: #1d2021;
+    /* background: #3c3836; */
+    background: #282828;
     padding: 0 8px;
 }

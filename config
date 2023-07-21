@@ -19,6 +19,8 @@ exec wmname LG3D
 
 ### Style
 default_border pixel 1
+# default_border normal
+default_floating_border normal
 font pango:JetbrainsMonoNerdFont Regular 10
 title_align center
 
@@ -40,7 +42,6 @@ client.urgent           #fadb2f #fadb2f #282828 #fadb2f   #fadb2f
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
 
-for_window [shell="xwayland"] title_format "%title [XWayland]"
 # gaps inner 4
 
 ### Variables
@@ -127,6 +128,11 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 ### Misc
 focus_on_window_activation focus
 for_window [app_id="zoom"] sticky enable
+for_window [shell="xwayland"] title_format "%title [XWayland]"
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="dialog"] floating enable
+for_window [window_type="dialog"] floating enable
 
 ### Key bindings
 #
@@ -190,8 +196,8 @@ for_window [app_id="zoom"] sticky enable
     # Lock screen
     bindsym $mod+i exec $lock
 
-    # Toggle bar
-    bindsym $mod+Shift+b bar mode toggle
+    # Toggle titlebars
+    bindsym $mod+Shift+b exec $HOME/.local/bin/toggleborders.sh
 
     bindsym Scroll_Lock exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
     bindsym $mod+Shift+Escape exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
@@ -269,7 +275,7 @@ for_window [app_id="zoom"] sticky enable
     bindsym $mod+Mod1+m fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Shift+space floating toggle
+    bindsym $mod+Shift+space exec swaymsg floating toggle && $HOME/.local/bin/toggleborders.sh
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle

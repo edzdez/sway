@@ -62,7 +62,7 @@ set $lock swaylock -f
 
 # set $menu dmenu_path | dmenu | xargs swaymsg exec --
 # set $menu j4-dmenu-desktop -term=alacritty --no-generic --dmenu='dmenu -b -l 20 -p "Run:"' | xargs swaymsg exec --
-set $menu j4-dmenu-desktop -term=alacritty --no-generic --dmenu='$HOME/.local/bin/bemenu_run.sh -b --fixed-height' | xargs swaymsg exec --
+set $menu j4-dmenu-desktop -term=alacritty --no-generic --dmenu='$HOME/.local/bin/bemenu.sh -b --fixed-height' | xargs swaymsg exec --
 
 ### Output configuration
 #

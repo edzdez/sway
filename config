@@ -199,7 +199,11 @@ for_window [window_type="dialog"] floating enable
     bindsym $mod+i exec $lock
 
     # Toggle titlebars
-    bindsym $mod+Shift+b exec $HOME/.local/bin/toggleborders.sh
+    bindsym $mod+Mod1+b exec $HOME/.local/bin/toggleborders.sh
+
+    # Toggle bar
+    bindsym $mod+Shift+b exec pkill -SIGUSR1 "^waybar$"
+
 
     bindsym Scroll_Lock exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh
     bindsym $mod+Shift+Escape exec pactl set-source-mute @DEFAULT_SOURCE@ toggle && $HOME/.local/bin/notify-micmute.sh

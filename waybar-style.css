@@ -20,7 +20,7 @@ tooltip label {
 
 #mode {
     padding: 0 0.5rem;
-    background: #fabd2f;
+    background: #fe8019;
     color: #282828;
 }
 
@@ -38,7 +38,7 @@ tooltip label {
 #workspaces button.focused {
     background: #3c3836;
     color: #ebdbb2;
-    border-bottom: 3px solid #83a598;
+    border-bottom: 3px solid #fabd2f;
 }
 
 #scratchpad {
@@ -54,7 +54,7 @@ tooltip label {
 }
 
 window#waybar {
-    background: #83a598;
+    background: #fabd2f;
     color: #282828;
     /* font-weight: bold; */
 }

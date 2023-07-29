@@ -35,7 +35,7 @@ title_align center
 
 ### Gruvbox
 # class                 border  bground text    indicator child_border
-client.focused          #3c3836 #3c3836 #ebdbb2 #b8bb26   #282828
+client.focused          #3c3836 #3c3836 #ebdbb2 #83a598   #282828
 client.focused_inactive #32302f #32302f #ebdbb2 #928374   #282828
 client.unfocused        #282828 #282828 #928374 #928374   #282828
 client.urgent           #fadb2f #fadb2f #282828 #fadb2f   #fadb2f

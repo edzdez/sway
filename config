@@ -21,7 +21,7 @@ exec wmname LG3D
 default_border pixel 1
 # default_border normal
 default_floating_border normal
-font pango:JetbrainsMonoNerdFont Regular 10
+font pango:JetbrainsMono Regular 10
 title_align center
 
 ### Tomorrow Night
@@ -75,6 +75,7 @@ set $menu j4-dmenu-desktop -term=alacritty --no-generic --dmenu='$HOME/.local/bi
 # output * bg ~/.local/share/backgrounds/tomorrow_night_triangle.png fill
 # output * bg ~/.local/share/backgrounds/uwucist/trees.jpg fill
 output * bg ~/.local/share/backgrounds/uwucist/gruvbox/mountains-2.jpg fill
+# output * bg ~/Downloads/wallhaven-1pr739.png fill
 # output eDP-1 position 0 1080
 # output "ASUSTek COMPUTER INC ASUS VG249 0x0000C333" position 0 0 resolution 1920x1080@120Hz
 output eDP-1 position 0 0
@@ -118,6 +119,7 @@ input "1267:12850:ELAN06A1:00_04F3:3232_Touchpad" {
     tap disabled
     natural_scroll enabled
     middle_emulation enabled
+    click_method clickfinger
 }
 
 input "1133:50503:Logitech_USB_Receiver" {

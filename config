@@ -17,6 +17,8 @@ exec wl-paste -t text --watch clipman store --no-persist
 
 exec wmname LG3D
 
+exec /home/ethan/.config/sway/import-gsettings
+
 ### Style
 default_border pixel 1
 # default_border normal
@@ -36,8 +38,8 @@ title_align center
 ### Gruvbox
 # class                 border  bground text    indicator child_border
 client.focused          #504945 #504945 #ebdbb2 #98971a   #83a598
-client.focused_inactive #3c3836 #3c3836 #ebdbb2 #928374   #3c3836
-client.unfocused        #282828 #282828 #928374 #928374   #282828
+client.focused_inactive #504945 #3c3836 #ebdbb2 #928374   #3c3836
+client.unfocused        #504945 #282828 #928374 #928374   #282828
 client.urgent           #fadb2f #fadb2f #282828 #fadb2f   #fadb2f
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
@@ -78,7 +80,7 @@ set $menu rofi -show drun -modes "drun,run"
 output * bg ~/.local/share/backgrounds/uwucist/gruvbox/mountains-2.jpg fill
 # output * bg ~/Downloads/wallhaven-1pr739.png fill
 # output eDP-1 position 0 1080
-# output "ASUSTek COMPUTER INC ASUS VG249 0x0000C333" position 0 0 resolution 1920x1080@120Hz
+output "ASUSTek COMPUTER INC ASUS VG249 0x0001C233" resolution 1920x1080@120Hz
 output eDP-1 position 0 0
 
 bindswitch --locked lid:on output eDP-1 disable
@@ -127,6 +129,10 @@ input "1133:50503:Logitech_USB_Receiver" {
     accel_profile "flat"
 }
 
+input "5426:120:Razer_Razer_Viper" {
+    accel_profile "flat"
+}
+
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_layout us,us
     xkb_variant dvorak,dvorak-intl
@@ -136,7 +142,7 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 input "44461:64352:KnoblesseOblige_Freebird60" {
     xkb_layout us,us
     xkb_variant ,intl
-    xkb_options caps:escape,grp:rcrtl_toggle
+    xkb_options caps:escape,grp:rctrl_toggle
 }
 
 ### Misc
@@ -176,10 +182,10 @@ for_window [title="Eyedropper"] floating enable
     bindsym $mod+f exec $fm
 
     # Start emacs client
-    # bindsym $mod+e exec emacsclient -c
+    bindsym $mod+e exec emacsclient -c
 
     # Restart emacs
-    # bindsym $mod+Shift+e exec ~/.local/bin/restartemacs.sh
+    # bindsym $mod+Mod1+e exec ~/.local/bin/restartemacs.sh
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -245,6 +251,7 @@ for_window [title="Eyedropper"] floating enable
 
     # Trigger sway-easyfocus
     bindsym $mod+Escape exec ~/.local/bin/sway-easyfocus
+    bindsym $mod+Mod1+Escape exec ~/.local/bin/sway-easyfocus swap
 
     # Move the focused window with the same, but add Shift
     bindsym $mod+Shift+$left move left
@@ -285,6 +292,14 @@ for_window [title="Eyedropper"] floating enable
     # We just use 1-10 as the default.
     # Switch to previous workspace
     bindsym $mod+Tab workspace back_and_forth
+    bindsym $mod+Control+Shift+Right move workspace to output right
+    bindsym $mod+Control+Shift+Left move workspace to output left
+    bindsym $mod+Control+Shift+Down move workspace to output down
+    bindsym $mod+Control+Shift+Up move workspace to output up
+    bindsym $mod+Control+Shift+$right move workspace to output right
+    bindsym $mod+Control+Shift+$left move workspace to output left
+    bindsym $mod+Control+Shift+$down move workspace to output down
+    bindsym $mod+Control+Shift+$up move workspace to output up
 #
 # Layout stuff:
 #
@@ -346,6 +361,19 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+mode "open-dir" {
+    bindsym c exec alacritty --working-directory "$($HOME/.local/bin/courses.sh)"; mode "default"
+    bindsym Shift+c exec nemo "$($HOME/.local/bin/courses.sh)"; mode "default"
+    bindsym b exec alacritty --working-directory $HOME/Documents/Books/pdf; mode "default"
+    bindsym Shift+b exec nemo $HOME/Documents/Books/pdf; mode "default"
+    bindsym g exec alacritty --working-directory "$HOME/.config/$(ls -D $HOME/.config | rofi -dmenu)"; mode "default"
+
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Shift+Return mode "open-dir"
 
 #
 # Status Bar:

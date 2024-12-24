@@ -367,7 +367,8 @@ mode "open-dir" {
     bindsym Shift+c exec nemo "$($HOME/.local/bin/courses.sh)"; mode "default"
     bindsym b exec alacritty --working-directory $HOME/Documents/Books/pdf; mode "default"
     bindsym Shift+b exec nemo $HOME/Documents/Books/pdf; mode "default"
-    bindsym g exec alacritty --working-directory "$HOME/.config/$(ls -D $HOME/.config | rofi -dmenu)"; mode "default"
+    bindsym g exec alacritty --working-directory "$HOME/.config/$(ls -D $HOME/.config | rofi -dmenu -i)"; mode "default"
+    bindsym r exec zathura "$HOME/Documents/Books/pdf/$(ls $HOME/Documents/Books/pdf | rofi -dmenu -i)"; mode "default"
 
     # Return to default mode
     bindsym Return mode "default"

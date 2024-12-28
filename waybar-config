@@ -87,6 +87,7 @@
         "format": " {:%I:%M %p (%Z)}",
         "tooltip-format": "{tz_list}",
         "timezones": [
+            "",
             "America/Chicago",
             "America/Los_Angeles"
         ],

@@ -191,6 +191,10 @@ for_window [title="Eyedropper"] floating enable
     bindsym $mod+d exec $menu
     bindsym $mod+Shift+Tab exec rofi -show window
 
+    # Start Zathura (tiled)
+    bindsym $mod+z exec zathura
+    bindsym $mod+Shift+z exec zathura "$(wl-paste)"
+
     # Reload the configuration file
     bindsym $mod+Mod1+r reload
 

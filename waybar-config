@@ -26,43 +26,43 @@
         }
     },
     "sway/scratchpad": {
-        "format": "{icon}  {count}",
+        "format": "{icon} {count}",
         "show-empty": true,
-        "format-icons": ["", ""],
+        "format-icons": ["󰖲", "󰖲"],
         "tooltip": true,
         "tooltip-format": "{app}: {title}"
     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": "󰈈",
+            "deactivated": "󰈉"
         }
     },
     "cpu": {
-        "format": " {usage}%",
+        "format": "󰘚 {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": " {}%"
+        "format": "󰍛 {}%"
     },
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon} {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
         "tooltip": false,
         "on-scroll-up": "brightnessctl set +1% && $HOME/.local/bin/notify-backlight.sh",
         "on-scroll-down": "brightnessctl set 1%- && $HOME/.local/bin/notify-backlight.sh"
     },
     "pulseaudio": {
-        "format": "{icon} {volume}%{format_source}",
-        "format-muted": " {volume}%{format_source}",
-        "format-bluetooth": "{icon} {volume}%{format_source}",
-        "format-bluetooth-muted": "{volume}%{format_source}",
-        "format-source": " ",
-        "format-source-muted": " ",
+        "format": "{icon} {volume}% {format_source}",
+        "format-muted": "󰝟 {volume}% {format_source}",
+        "format-bluetooth": "{icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "{volume}% {format_source}",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "default": ["", "", ""]
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol",
         "on-click-middle": "$HOME/.local/bin/pamixer -t && $HOME/.local/bin/notify-volume.sh",
@@ -76,15 +76,15 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": [" ", " ", " ", " ", " "]
+        "format-icons": ["", "", "", "", ""]
     },
     "clock": {
-        "format": " {:%I:%M %p (%Z)}",
+        "format": "󰥔 {:%I:%M %p (%Z)}",
         "tooltip-format": "{tz_list}",
         "timezones": [
             "",
@@ -97,7 +97,7 @@
         }
     },
     "clock#date": {
-        "format": " {:%D}",
+        "format": "󰃭 {:%D}",
         "tooltip-format": "<tt>{calendar}</tt>",
         "calendar": {
             "format": {

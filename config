@@ -366,12 +366,12 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "open-dir" {
-    bindsym c exec alacritty --working-directory "$($HOME/.local/bin/courses.sh)"; mode "default"
-    bindsym Shift+c exec nemo "$($HOME/.local/bin/courses.sh)"; mode "default"
-    bindsym b exec alacritty --working-directory $HOME/Documents/Books/pdf; mode "default"
-    bindsym Shift+b exec nemo $HOME/Documents/Books/pdf; mode "default"
-    bindsym g exec alacritty --working-directory "$HOME/.config/$(ls -D $HOME/.config | rofi -dmenu -i)"; mode "default"
-    bindsym r exec zathura "$HOME/Documents/Books/pdf/$(ls $HOME/Documents/Books/pdf | rofi -dmenu -i)"; mode "default"
+    bindsym c exec sel=$(ls -D ~/Documents/Courses | rofi -dmenu -i) && alacritty --working-directory "$HOME/Documents/Courses/$sel"; mode "default"
+    bindsym Shift+c exec sel=$(ls -D ~/Documents/Courses | rofi -dmenu -i) && nemo "$HOME/Documents/Courses/$sel"; mode "default"
+    bindsym b exec alacritty --working-directory $HOME/Documents/Books/Technical; mode "default"
+    bindsym Shift+b exec nemo $HOME/Documents/Books/Technical; mode "default"
+    bindsym g exec sel=$(ls -D $HOME/.config | rofi -dmenu -i) && alacritty --working-directory "$HOME/.config/$sel"; mode "default"
+    bindsym r exec sel=$(ls $HOME/Documents/Books/Technical | rofi -dmenu -i) && zathura "$HOME/Documents/Books/Technical/$sel"; mode "default"
 
     # Return to default mode
     bindsym Return mode "default"

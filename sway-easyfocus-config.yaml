@@ -1,12 +1,12 @@
-chars: 'abcdefghijklmnopqrstuvwxyz'
+chars: "abcdefghijklmnopqrstuvwxyz"
 
-window_background_color: '282828'
+window_background_color: "282828"
 window_background_opacity: 0.4
 
-label_background_color: '504945'
+label_background_color: "504945"
 label_background_opacity: 1.0
 
-focused_background_color: '83a598'
+focused_background_color: "83a598"
 focused_background_opacity: 1.0
 
 label_text_color: ebdbb2
@@ -20,3 +20,5 @@ label_margin_x: 0
 label_margin_y: 0
 
 font_size: large
+
+show_confirmation: false

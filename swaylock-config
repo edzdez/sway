@@ -1,17 +1,7 @@
 font=Jetbrains Mono Nerd Font
 
-clock
-timestr=%l:%M %p
-datestr=%A, %b %e
+image=/home/ethan/.local/share/backgrounds/uwucist/gruvbox/mountains-2.jpg
 
-screenshots
-
-fade-in=0.2
-
-effect-blur=20x2
-effect-scale=0.3
-
-indicator
 indicator-radius=100
 
 key-hl-color=83a598

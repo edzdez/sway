@@ -9,7 +9,7 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1
 exec dunst
 
 exec nm-applet --indicator
-exec /home/ethan/.local/bin/power-profiles-applet
+# exec /home/ethan/.local/bin/power-profiles-applet
 exec blueman-applet
 
 exec wl-paste -t text --watch clipman store --no-persist
@@ -80,7 +80,6 @@ output * bg ~/.local/share/backgrounds/uwucist/gruvbox/mountains-2.jpg fill
 # output * bg ~/Downloads/wallhaven-1pr739.png fill
 # output eDP-1 position 0 1080
 output "ASUSTek COMPUTER INC ASUS VG249 0x0001C233" resolution 1920x1080@120Hz
-output eDP-1 position 0 0
 
 bindswitch --locked lid:on output eDP-1 disable
 bindswitch --locked lid:off output eDP-1 enable
@@ -128,6 +127,10 @@ input "1133:50503:Logitech_USB_Receiver" {
     accel_profile "flat"
 }
 
+input "1133:45106:Logi_M650_L_B_Mouse" {
+    accel_profile "flat"
+}
+
 input "5426:120:Razer_Razer_Viper" {
     accel_profile "flat"
 }
@@ -142,6 +145,12 @@ input "44461:64352:KnoblesseOblige_Freebird60" {
     xkb_layout us,us
     xkb_variant ,intl
     xkb_options caps:escape,grp:rctrl_toggle
+}
+
+input "51984:5974:Keebio_Iris_LM-K_Rev._1" {
+    xkb_layout us,us
+    xkb_variant ,intl
+    xkb_options grp:rwin_toggle
 }
 
 ### Misc
@@ -238,6 +247,9 @@ for_window [title="Eyedropper"] floating enable
     # Bookmarks
     bindsym $mod+v exec $HOME/.local/bin/bookmark-locate.sh
     bindsym $mod+c exec $HOME/.local/bin/bookmark-add.sh
+
+    # Power profiles
+    bindsym $mod+p exec $HOME/.local/bin/tuned-rofi
 #
 # Moving around:
 #
@@ -366,11 +378,11 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 mode "open-dir" {
-    bindsym c exec sel=$(ls -D ~/Documents/Courses | rofi -dmenu -i) && alacritty --working-directory "$HOME/Documents/Courses/$sel"; mode "default"
-    bindsym Shift+c exec sel=$(ls -D ~/Documents/Courses | rofi -dmenu -i) && nemo "$HOME/Documents/Courses/$sel"; mode "default"
+    bindsym c exec sel=$(ls -d ~/Documents/Courses/*/ | awk -F/ '{ print $(NF-1) }' | rofi -dmenu -i) && alacritty --working-directory "$HOME/Documents/Courses/$sel"; mode "default"
+    bindsym Shift+c exec sel=$(ls -d ~/Documents/Courses/*/ | awk -F/ '{ print $(NF-1) }' | rofi -dmenu -i) && nemo "$HOME/Documents/Courses/$sel"; mode "default"
     bindsym b exec alacritty --working-directory $HOME/Documents/Books/Technical; mode "default"
     bindsym Shift+b exec nemo $HOME/Documents/Books/Technical; mode "default"
-    bindsym g exec sel=$(ls -D $HOME/.config | rofi -dmenu -i) && alacritty --working-directory "$HOME/.config/$sel"; mode "default"
+    bindsym g exec sel=$(ls -d $HOME/.config/*/ | awk -F/ '{ print $(NF-1) }' | rofi -dmenu -i) && alacritty --working-directory "$HOME/.config/$sel"; mode "default"
     bindsym r exec sel=$(ls $HOME/Documents/Books/Technical | rofi -dmenu -i) && zathura "$HOME/Documents/Books/Technical/$sel"; mode "default"
 
     # Return to default mode
